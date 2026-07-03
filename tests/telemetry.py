@@ -32,14 +32,14 @@ try:
     
     colapinto = GP.laps.pick_drivers('COL')
 
-    filas_iniciales = len(colapinto)
+    starter = len(colapinto)
     
     colapinto = colapinto.dropna(subset=['LapTime'])
 
     colapinto['LapTime_sec'] = colapinto['LapTime'].dt.total_seconds()
     
-    filas_finales = len(colapinto)
-    logging.info(f"Clean data: {filas_iniciales - filas_finales} invalid laps were discarded.")
+    ending = len(colapinto)
+    logging.info(f"Clean data: {starter - ending} invalid laps were discarded.")
     
     conexion = sqlite3.connect('f1_telemetry.db')
 
