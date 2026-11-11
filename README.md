@@ -1,4 +1,3 @@
-```markdown
 # F1 Telemetry Pipeline & Analysis
 
 A data engineering and visualization pipeline developed in **Python** to extract, process, and analyze official **Formula 1** telemetry using the `FastF1` library. The processed data is stored locally in an SQLite database for subsequent graphical analysis.
@@ -58,4 +57,3 @@ python plot_telemetry.py
 
 ```
 
-```
