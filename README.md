@@ -17,22 +17,28 @@ Un pipeline de ingeniería de datos y visualización desarrollado en **Python** 
 ├── README.md               # Documentación del proyecto
 ├── pipeline.py             # Script de extracción, limpieza y almacenamiento en SQLite
 └── plot_telemetry.py       # Script de ploteo y comparación de telemetría y trazas GPS
+```
 
 ⚙️ Requisitos e Instalación
-Asegúrate de tener Python instalado y ejecuta los siguientes comandos para instalar las dependencias necesarias:
-
-pip install pandas matplotlib fastf1 python-dotenv
+- Asegúrate de tener Python instalado y ejecuta los siguientes comandos para instalar las dependencias necesarias:
+```text
+  pip install pandas matplotlib fastf1 python-dotenv
+```
 
 💻 Uso
-Configurar el entorno: Crea un archivo .env basado en .env.example si deseas personalizar el nombre de la base de datos (por defecto se usará f1_telemetry.db).
+- Configurar el entorno: Crea un archivo .env basado en .env.example si deseas personalizar el nombre de la base de datos (por defecto se usará f1_telemetry.db).
 
 Ejecutar el pipeline de extracción:
+```text
   python pipeline.py
+```
 
 Generar las visualizaciones:
+```text
   python plot_telemetry.py
+```
 
-🛠️ Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas
 Python 3.x
 
 FastF1 (Telemetry API)
