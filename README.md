@@ -1,50 +1,61 @@
+```markdown
 # F1 Telemetry Pipeline & Analysis
 
-Un pipeline de ingeniería de datos y visualización desarrollado en **Python** para extraer, procesar y analizar telemetría oficial de la **Fórmula 1** utilizando la librería `FastF1`. Los datos procesados se almacenan de forma local en una base de datos SQLite para su posterior análisis gráfico.
+A data engineering and visualization pipeline developed in **Python** to extract, process, and analyze official **Formula 1** telemetry using the `FastF1` library. The processed data is stored locally in an SQLite database for subsequent graphical analysis.
 
-## 🚀 Características principales
-- **Extracción automatizada:** Conexión con la API de FastF1 para descargar datos de sesiones de práctica (FP1), filtrando vueltas válidas y descartando registros con datos nulos.
-- **Persistencia en Base de Datos:** Almacenamiento estructurado en SQLite (`f1_telemetry.db`) separando la telemetría detallada de la vuelta rápida y los tiempos generales de sesión por piloto.
-- **Registro de Eventos (Logging):** Sistema de logs (`f1_pipeline.log`) para la trazabilidad y control de errores en el proceso de extracción.
-- **Visualización de Datos:** Generación de gráficos comparativos de velocidad por distancia y mapas de traza GPS en circuito utilizando `matplotlib`.
+## 🚀 Key Features
+- **Automated Extraction:** Connection with the FastF1 API to download free practice session data (FP1), filtering out invalid laps and discarding records with null data.
+- **Database Persistence:** Structured storage in SQLite (`f1_telemetry.db`), separating detailed fastest-lap telemetry from general session lap times per driver.
+- **Event Logging:** A logging system (`f1_pipeline.log`) for traceability and error control during the extraction process.
+- **Data Visualization:** Generation of comparative speed-by-distance charts and circuit GPS trace maps using `matplotlib`.
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
 ```text
-├── .env.example            # Plantilla de variables de entorno
-├── .gitignore              # Archivos ignorados por Git (caché, bases de datos, logs)
-├── LICENSE                 # Licencia de código abierto (MIT)
-├── README.md               # Documentación del proyecto
-├── pipeline.py             # Script de extracción, limpieza y almacenamiento en SQLite
-└── plot_telemetry.py       # Script de ploteo y comparación de telemetría y trazas GPS
+├── .env.example            # Environment variables template
+├── .gitignore              # Files ignored by Git (cache, databases, logs)
+├── LICENSE                 # Open-source license (MIT)
+├── README.md               # Project documentation
+├── pipeline.py             # Extraction, cleaning, and SQLite storage script
+└── plot_telemetry.py       # Telemetry plotting and GPS comparison script
+
 ```
 
-⚙️ Requisitos e Instalación
-- Asegúrate de tener Python instalado y ejecuta los siguientes comandos para instalar las dependencias necesarias:
-```text
-  pip install pandas matplotlib fastf1 python-dotenv
+## ⚙️ Requirements & Installation
+
+Make sure you have Python installed, then run the following commands to install the required dependencies:
+
+```bash
+pip install pandas matplotlib fastf1 python-dotenv
+
 ```
 
-💻 Uso
-- Configurar el entorno: Crea un archivo .env basado en .env.example si deseas personalizar el nombre de la base de datos (por defecto se usará f1_telemetry.db).
+## 💻 Usage
 
-Ejecutar el pipeline de extracción:
-```text
-  python pipeline.py
+1. **Configure Environment:** Create a `.env` file based on `.env.example` if you want to customize the database name (by default, `f1_telemetry.db` will be used).
+2. **Run the Extraction Pipeline:**
+```bash
+python pipeline.py
+
 ```
 
-Generar las visualizaciones:
-```text
-  python plot_telemetry.py
+
+3. **Generate Visualizations:**
+```bash
+python plot_telemetry.py
+
 ```
 
-## 🛠️ Tecnologías utilizadas
-Python 3.x
 
-FastF1 (Telemetry API)
 
-Pandas (Manipulación de datos)
+## 🛠️ Technologies Used
 
-SQLite3 (Base de datos relacional)
+* **Python 3.x**
+* **FastF1** (Telemetry API)
+* **Pandas** (Data manipulation)
+* **SQLite3** (Relational database)
+* **Matplotlib** (Data visualization)
 
-Matplotlib (Visualización de gráficos)
+```
+
+```
